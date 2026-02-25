@@ -17,7 +17,7 @@ spec:
         image: wil42/playground:v2
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 8888
       restartPolicy: Always
 
 ---
@@ -29,6 +29,6 @@ spec:
   selector:
     app: playground
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 8888
+    targetPort: 8888
   type: ClusterIP
